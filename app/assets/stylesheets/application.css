@@ -1,15 +1,78 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+*{
+  margin: 0;
+  padding: 0
+  box-sizing: border-box;
+}
+
+.top_subject{
+  font-weight: bold;
+}
+
+.top_title{
+  margin-left: 33px;
+  margin-top: 33px;
+}
+
+.top_detail{
+  margin-left: 75px;
+  margin-top: 33px;
+}
+
+.index_header{
+  margin-left: 33px;
+  margin-top: 33px;
+}
+
+.index_main_content{
+  margin-left: 33px;
+}
+
+th, td{
+  display: table-cell;
+}
+
+td{
+  padding-right: 5px;
+}
+
+.index_write_contet{
+  margin-left: 33px;
+  margin-top: 33px;
+}
+
+.index_write_subject, .index_write_title, .index_write_body, .index_write_submit{
+  margin-top: 5px;
+}
+
+.show_contents{
+  margin-left: 33px;
+  margin-top: 33px;
+}
+
+.show_subject{
+  font-weight: bold;
+}
+
+.show_tb{
+  margin-bottom: 33px;
+}
+
+.show_eb{
+  display: flex;
+  margin-top: 10px;
+  margin-left: 33px;
+}
+
+.show_icon{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.edit_contents{
+  margin-top: 33px;
+  margin-left: 33px;
+}
+
+.edit_tb{
+  margin-bottom: 10px;
+}
