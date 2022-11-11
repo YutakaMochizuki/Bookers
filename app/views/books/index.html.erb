@@ -1,3 +1,7 @@
+<% if flash[:success] %>
+ <p class="index_destroy_message"><%= flash[:success] %></p>
+<% end %>
+
 <header class="index_header">
   <h1>Books</h1>
 </header>
@@ -7,12 +11,13 @@
 <table>
   <tr><th>Title</th><th>Body</th></tr>
   <% @books.each do |book| %>
+<div class="edit_contents">
   <tr>
     <td><%= book.title %></td>
     <td><%= book.body %></td>
-    <td><%= link_to"Show", "/books/#{@book.id}" %></td>
-    <td><%= link_to"Edit", "/books/#{@book.id}/edit" %></td>
-    <td><%= link_to "Destroy", "/books/#{@book.id}", method: :delete, "data-confirm" => "Are you sure?" %></td>
+    <td><%= link_to"Show", "books/#{book.id}" %></td>
+    <td><%= link_to"Edit", "books/#{book.id}/edit" %></td>
+    <td><%= link_to "Destroy", destroy_book_path("#{book.id}"), method: :delete, "data-confirm" => "Are you sure?" %></td>
   </tr>
   <% end %>
 </table>
@@ -20,6 +25,13 @@
 
 <div class="index_write_contet">
 <h2 class="index_write_subject">New Book</h2>
+<% if @book.errors.any? %>
+ <ul>
+   <% @book.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+   <% end %>
+ </ul>
+<% end %>
 <%= form_with model: @book do |f| %>
 <p class="index_write_title">Title</p>
 <%= f.text_field :title %>

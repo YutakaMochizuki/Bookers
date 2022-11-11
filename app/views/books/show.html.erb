@@ -1,3 +1,12 @@
+<div>
+  <p class="show_flash_message"><%= flash[:notice] %></p>
+</div>
+
+<% if flash[:coment] %>
+ <p class="show_update_message"><%= flash[:coment] %></p>
+<% end %>
+
+
 <div class="show_contents">
  <div class="show_tb">
   <p><a class="show_subject">Title: </a><a><%= @book.title %></a></p>

@@ -18,6 +18,12 @@
   margin-top: 33px;
 }
 
+.index_destroy_message{
+  color: green;
+  margin-top: 33px;
+  margin-left: 70px;
+}
+
 .index_header{
   margin-left: 33px;
   margin-top: 33px;
@@ -44,6 +50,18 @@ td{
   margin-top: 5px;
 }
 
+.show_flash_message{
+  color: green;
+  margin-left: 33px;
+  margin-top: 33px;
+}
+
+.show_update_message{
+  margin-top: 33px;
+  margin-left: 33px;
+  color: green;
+}
+
 .show_contents{
   margin-left: 33px;
   margin-top: 33px;
@@ -60,7 +78,6 @@ td{
 .show_eb{
   display: flex;
   margin-top: 10px;
-  margin-left: 33px;
 }
 
 .show_icon{
@@ -75,4 +92,15 @@ td{
 
 .edit_tb{
   margin-bottom: 10px;
+}
+
+.edit_eb{
+  display: flex;
+  margin-top: 10px;
+  margin-left: 33px;
+}
+
+.edit_icon{
+  margin-left: 5px;
+  margin-right: 5px;
 }

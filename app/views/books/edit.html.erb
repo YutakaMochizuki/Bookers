@@ -1,30 +1,37 @@
 <%= form_with model: @book, url: edit_book_path(@book.id), method: :patch do |f| %>
 <div class="edit_contents">
  <div class="edit_tb">
-  <h2>Edditing Book</h2>     
+  <h2>Edditing Book</h2>
  </div>
- 
+ <% if @book.errors.any? %>
+ <ul>
+   <% @book.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+   <% end %>
+ </ul>
+<% end %>
+
  <p>Title</p>
  <div class="edit_tb">
-  <%= f.text_field :title %>  
+  <%= f.text_field :title %>
  </div>
 
  <p>Body</p>
  <div class="edit_tb">
-  <%= f.text_area :body %></br>    
+  <%= f.text_area :body %></br>
  </div>
  <%= f.submit 'Update Book' %>
- <% end %>    
+ <% end %>
 </div>
 
- <div class="show_eb">
-  <div class="show_edit">
+ <div class="edit_eb">
+  <div class="edit_edit">
    <%= link_to "Edit", edit_book_path(@book.id) %>
   </div>
-  <div class="show_icon">
+  <div class="edit_icon">
     <p>|</p>
   </div>
-  <div class="show_back">
+  <div class="edit_back">
    <a href="/books">Back</a>
   </div>
  </div>
